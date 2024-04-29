@@ -1,6 +1,9 @@
+package server.room;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import server.User;
 
 public class RoomManager {
     private static int TEMP_ROOM_NUMBER = 1;

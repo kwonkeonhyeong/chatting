@@ -1,9 +1,13 @@
+package server;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 import java.util.Map;
+import server.room.RoomManager;
+import server.util.Util;
 
 public class ChatThread implements Runnable {
 
@@ -109,7 +113,6 @@ public class ChatThread implements Runnable {
                     } else {
                         out.println(targetRoom + "번방은 존재하지 않는 방입니다.");
                     }
-
                     continue;
                 }
 

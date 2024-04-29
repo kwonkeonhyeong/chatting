@@ -1,9 +1,13 @@
+package server.room;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import server.User;
+import server.util.Util;
 
 public class ChatRoom {
     private final Map<String, User> users;
@@ -25,6 +29,7 @@ public class ChatRoom {
         broadcast(user.getId() + "님이 입장하셨습니다.",user);
         chat(user);
     }
+
 
     public boolean isEmptyMembers() {
         return members.isEmpty();
@@ -72,8 +77,6 @@ public class ChatRoom {
     public void selfMessage(String msg, User user) {
         user.getOut().println(msg);
     }
-
-
 
     public void broadcast(String msg, User user) {
         List<PrintWriter> outs = members.values().stream().map(User::getOut).toList();

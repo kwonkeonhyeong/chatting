@@ -1,4 +1,7 @@
+package server.util;
+
 import java.util.Map;
+import server.User;
 
 public class Util {
     public static void whisper(String msg, User user, Map<String, User> users) {

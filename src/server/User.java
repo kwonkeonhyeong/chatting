@@ -1,3 +1,5 @@
+package server;
+
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.util.Objects;
@@ -5,8 +7,8 @@ import java.util.Objects;
 public class User {
     private final PrintWriter out;
     private final BufferedReader in;
-    private String id;
-    private String ip;
+    private final String id;
+    private final String ip;
 
     public User(String id,String ip,PrintWriter out,BufferedReader in) {
         this.id = id;
